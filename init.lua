@@ -387,6 +387,41 @@ minetest.register_craft({
 	}
 })
 
+if minetest.get_modpath("moreblocks") then
+	
+	stairsplus:register_all("castle", "dungeon_stone", "castle:dungeon_stone", {
+		description = "Dungeon Stone",
+		tiles = {"castle_dungeon_stone.png"},
+		groups = {cracky=1, not_in_creative_inventory=1},
+		sounds = default.node_sound_stone_defaults(),
+		sunlight_propagates = true,
+	})
+
+	stairsplus:register_all("castle", "pavement_brick", "castle:pavement_brick", {
+		description = "Pavement Brick",
+		tiles = {"castle_pavement_brick.png"},
+		groups = {cracky=1, not_in_creative_inventory=1},
+		sounds = default.node_sound_stone_defaults(),
+		sunlight_propagates = true,
+		})
+
+	stairsplus:register_all("castle", "stonewall", "castle:stonewall", {
+		description = "Stone Wall",
+		tiles = {"castle_stonewall.png"},
+		groups = {cracky=1, not_in_creative_inventory=1},
+		sounds = default.node_sound_stone_defaults(),
+		sunlight_propagates = true,
+	})
+
+	stairsplus:register_all("castle", "rubble", "castle:rubble", {
+		description = "Rubble",
+		tiles = {"castle_rubble.png"},
+		groups = {cracky=1, not_in_creative_inventory=1},
+		sounds = default.node_sound_stone_defaults(),
+		sunlight_propagates = true,
+		})
+	end
+
 stairs.register_stair_and_slab("dungeon_stone", "castle:dungeon_stone",
 		{cracky=3},
 		{"castle_dungeon_stone.png"},
