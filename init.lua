@@ -201,7 +201,7 @@ minetest.register_craft({
 	}
 })
 
-doors:register_door("castle:oak_door", {
+doors.register_door("castle:oak_door", {
 	description = "Oak Door",
 	inventory_image = "castle_oak_door_inv.png",
 	groups = {choppy=2,door=1},
@@ -210,7 +210,7 @@ doors:register_door("castle:oak_door", {
 	only_placer_can_open = true,
 })
 
-doors:register_door("castle:jail_door", {
+doors.register_door("castle:jail_door", {
 	description = "Jail Door",
 	inventory_image = "castle_jail_door_inv.png",
 	groups = {cracky=2,door=1},
