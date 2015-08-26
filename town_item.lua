@@ -1,10 +1,10 @@
-minetest.register_alias("darkage:box", "castle:crate")
-minetest.register_alias("cottages:straw", "castle:straw")
+minetest.register_alias("darkage:box",         "castle:crate")
+minetest.register_alias("cottages:straw",      "farming:straw")
+minetest.register_alias("castle:straw",        "farming:straw")
+minetest.register_alias("darkage:straw",       "farming:straw")
 minetest.register_alias("cottages:straw_bale", "castle:bound_straw")
-minetest.register_alias("darkage:straw", "castle:straw")
-minetest.register_alias("darkage:straw_bale", "castle:bound_straw")
-minetest.register_alias("darkage:lamp", "castle:street_light")
-
+minetest.register_alias("darkage:straw_bale",  "castle:bound_straw")
+minetest.register_alias("darkage:lamp",        "castle:street_light")
 
 minetest.register_node("castle:anvil",{
 	drawtype = "nodebox",
@@ -244,22 +244,6 @@ minetest.register_craft({
 	}
 })
 
-minetest.register_node("castle:straw", {
-	description = "Straw",
-	drawtype = "normal",
-	tiles = {"castle_straw.png"},
-	groups = {choppy=4, flammable=1, oddly_breakable_by_hand=3},
-	paramtype = "light",
-})
-
-minetest.register_craft({
-	output = "castle:straw",
-	recipe = {
-		{"default:grass_1", "default:grass_1"},
-		{"default:grass_1", "default:grass_1"},
-	}
-})
-
 minetest.register_node("castle:bound_straw", {
 	description = "Bound Straw",
 	drawtype = "normal",
@@ -275,12 +259,13 @@ minetest.register_craft({
 	}
 })
 
-stairs.register_stair_and_slab("straw", "castle:straw",
-		{choppy=3, flammable=1, oddly_breakable_by_hand=3},
-		{"castle_straw.png"},
-		"Castle Straw Stair",
-		"Castle Straw Slab",
-		default.node_sound_leaves_defaults())
+stairs.register_stair_and_slab("straw", "farming:straw",
+	{choppy=3, flammable=1, oddly_breakable_by_hand=3},
+	{"farming_straw.png"},
+	"Castle Straw Stair",
+	"Castle Straw Slab",
+	default.node_sound_leaves_defaults()
+)
 
 minetest.register_node("castle:pavement", {
 	description = "Paving Stone",
