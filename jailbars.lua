@@ -75,7 +75,7 @@ for i = 1, 15 do
     end
     minetest.register_node("castle:jailbars_"..i, {
         drawtype = "nodebox",
-        tile_images = {"castle_grey.png", "castle_grey.png", texture},
+        tiles = {"castle_grey.png", "castle_grey.png", texture},
         paramtype = "light",
         groups = {cracky=2},
         drop = "castle:jailbars",
@@ -92,7 +92,7 @@ end
 
 minetest.register_node("castle:jailbars", {
     description = "Jailbars",
-    tile_images = {"castle_space.png"},
+    tiles = {"castle_space.png"},
     inventory_image = "castle_jailbars.png",
     wield_image = "castle_jailbars.png",
     node_placement_prediction = "",
